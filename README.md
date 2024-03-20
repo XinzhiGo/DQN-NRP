@@ -34,11 +34,20 @@ q_target_.save_weights(q_target_path);
 
 ## How to run a demo
 
-If you want to run a specific instance , like the "n100w4_1_4_4_2_8" in paper. You can change the instanceName, initHis, and weekdata in simulator/main.cpp debugRun function. 
+If you want to run a specific instance, like the "n100w4_1_4_4_2_8" in paper. You can change the instanceName, initHis, and weekdata in simulator/main.cpp debugRun function. 
 
 - instanceName = "n100w4"
 - initHis = 1
 - weekdata = {4,4,2,8}
+
+## How to run comparison algorithm
+To validate the effectiveness of DQN, you can change the biasTabuSearch Function in `solver.cpp`.
+
+- sln.dqnSearch -------------- DQN-ILS
+- sln.compareSearch ------------ ANTS
+- sln.VNDSearch -------------- VNDTS
+
+Furthermore, if you want to change the neighborhood structure, you can change the ModeSeq.
 
 ## References
 
